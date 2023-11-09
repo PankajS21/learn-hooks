@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Parent from "./components/CustomHook/Parent";
+// import UseCallBackHook from "./components/UseCallBackHook";
+// import UseContextHook from "./components/UseContext/UseContextHook";
+// import UseMemoHook from "./components/UseMemoHook";
+import { useState } from "react";
+// import UseEffectHook from "./components/UseEffectHook";
+// import UseRefHook from "./components/UseRefHook";
+import UseStateHook from "./components/UseStateHook";
 
-function App() {
+
+export default function App() {
+  // const [flag, setFlag] = useState(true);  //For useEffect
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <UseStateHook/>
 
-export default App;
+
+      {/* For useEffect */}
+
+
+      {/* <div>
+        <button onClick={() => setFlag(!flag)}>Toggle</button>
+        {
+          flag ? <UseEffectHook /> : ""
+        }
+      </div> */}
+
+
+
+      {/* <UseRefHook /> */}
+
+      {/* <UseMemoHook /> */}
+
+      {/* <UseCallBackHook /> */}
+
+      {/* <UseContextHook /> */}
+
+      {/* <Parent /> */}
+    </div>
+  )
+}
